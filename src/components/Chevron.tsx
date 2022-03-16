@@ -19,8 +19,8 @@ export default Chevron;
 const sharedStyle = css`
   width: 0.9rem;
   height: 0.9rem;
-  margin-right: 0.3rem;
-  color: grey;
+  margin-right: 0.5rem;
+  color: #c0c0c0;
 `;
 
 const Styled = {

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { AiOutlineFile } from "react-icons/ai";
-import { BsFolderFill } from "react-icons/bs";
+import { FcFolder } from "react-icons/fc";
 import styled, { css } from "styled-components";
 
 interface IconProps {
@@ -20,14 +20,16 @@ export default Icon;
 const sharedStyle = css`
   width: 1.25rem;
   height: 1.25rem;
-  margin-right: 0.5rem;
+  margin-right: 0.6rem;
 `;
 
 const Styled = {
   File: styled(AiOutlineFile)`
     ${sharedStyle}
+
+    color: #4682b4;
   `,
-  Folder: styled(BsFolderFill)`
+  Folder: styled(FcFolder)`
     ${sharedStyle}
   `,
 };
