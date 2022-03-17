@@ -7,25 +7,19 @@ interface FolderTreeProps {
 }
 
 const FolderTree: FC<FolderTreeProps> = ({ data }) => {
-  const generateFolderEntry = ({ name, content }: FolderEntry) => {
-    if (content.length === 0) {
-      return <Folder name={name} />;
-    }
+  const generateFolderEntry = ({ name, content }: FolderEntry) => (
+    <Folder name={name}>
+      {content.map((item, index) => {
+        const { newName, newContent } = getNewNameAndContent(item);
 
-    return (
-      <Folder name={name}>
-        {content.map((item, index) => {
-          const { newName, newContent } = getNewNameAndContent(item);
-
-          return (
-            <Fragment key={index}>
-              {generateFolderEntry({ name: newName, content: newContent })}
-            </Fragment>
-          );
-        })}
-      </Folder>
-    );
-  };
+        return (
+          <Fragment key={index}>
+            {generateFolderEntry({ name: newName, content: newContent })}
+          </Fragment>
+        );
+      })}
+    </Folder>
+  );
 
   return (
     <div>

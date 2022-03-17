@@ -53,8 +53,8 @@ const Styled = {
   `,
   VerticalLine: styled.div`
     position: absolute;
-    top: -0.25rem;
-    bottom: -0.25rem;
+    top: 0rem;
+    bottom: 0rem;
     left: 0.45rem;
     width: 1px;
     background-color: #c0c0c0;
